@@ -7,6 +7,9 @@
   --lime: #b6e51d;
   --lime-soft: #d4f66b;
   --black: #121311;
+
+  /* Pequeno recuo visual dos textos */
+  --text-offset: 12px;
 }
 
 * {
@@ -86,6 +89,16 @@ nav a:hover {
   align-items: center;
   gap: 32px;
   padding: 30px 0 50px;
+}
+
+/*
+   O hero-copy recebe o mesmo pequeno recuo visual
+   usado nos demais textos do site.
+   O hero-card NÃO é deslocado.
+*/
+
+.hero-copy {
+  padding-left: var(--text-offset);
 }
 
 .eyebrow,
@@ -234,21 +247,16 @@ nav a:hover {
 }
 
 
-/* =====================================================
-   ALINHAMENTO DOS TEXTOS DAS SEÇÕES
-   ===================================================== */
-
 /*
-   A linha da seção continua exatamente no limite
-   do container.
+   Os títulos das seções recebem apenas um pequeno
+   recuo visual.
 
-   O recuo abaixo é somente visual para os textos.
-   Cards e grids NÃO são deslocados.
+   A linha, o container e os cards continuam
+   exatamente no mesmo alinhamento.
 */
 
 .section > .section-label {
-  display: block;
-  margin-left: 12px;
+  padding-left: var(--text-offset);
 }
 
 
@@ -262,8 +270,13 @@ nav a:hover {
   gap: 80px;
 }
 
-.intro > *:last-child {
-  padding-left: 12px;
+/*
+   Apenas o bloco textual de Sobre é recuado.
+   A coluna da seção permanece intacta.
+*/
+
+.intro > div:last-child {
+  padding-left: var(--text-offset);
 }
 
 .intro p,
@@ -350,8 +363,13 @@ h2 {
   margin-bottom: 50px;
 }
 
+/*
+   O título de Projetos recebe o mesmo recuo
+   dos demais textos.
+*/
+
 .projects-head > * {
-  padding-left: 12px;
+  padding-left: var(--text-offset);
 }
 
 .project-grid {
@@ -447,8 +465,13 @@ h2 {
   gap: 80px;
 }
 
+/*
+   Todo o conteúdo textual de contato recebe
+   o mesmo recuo visual.
+*/
+
 .contact-content {
-  padding-left: 12px;
+  padding-left: var(--text-offset);
 }
 
 .contact-content h2 {
@@ -506,6 +529,15 @@ footer {
     gap: 40px;
   }
 
+  /*
+     No tablet, o recuo continua pequeno e
+     o card permanece sem deslocamento.
+  */
+
+  .hero-copy {
+    padding-left: 8px;
+  }
+
   .hero-card {
     min-height: 400px;
   }
@@ -516,14 +548,11 @@ footer {
     gap: 32px;
   }
 
-  .intro > *:last-child,
+  .intro > div:last-child,
   .projects-head > *,
-  .contact-content {
-    padding-left: 8px;
-  }
-
+  .contact-content,
   .section > .section-label {
-    margin-left: 8px;
+    padding-left: 8px;
   }
 
   .tracks,
@@ -560,18 +589,23 @@ footer {
     padding: 25px 0;
   }
 
+  .hero {
+    padding: 50px 0;
+  }
+
+  .hero-copy {
+    padding-left: 4px;
+  }
+
   .hero h1 {
     font-size: 44px;
   }
 
-  .intro > *:last-child,
+  .intro > div:last-child,
   .projects-head > *,
-  .contact-content {
-    padding-left: 4px;
-  }
-
+  .contact-content,
   .section > .section-label {
-    margin-left: 4px;
+    padding-left: 4px;
   }
 
   .mini-card {
