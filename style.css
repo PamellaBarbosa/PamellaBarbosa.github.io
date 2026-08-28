@@ -24,6 +24,7 @@ body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system,
     BlinkMacSystemFont, "Segoe UI", sans-serif;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -73,37 +74,6 @@ nav a:hover {
 
 
 /* =====================================================
-   ELEMENTOS GERAIS
-   ===================================================== */
-
-.section-label {
-  color: var(--lime);
-  font-size: 12px;
-  font-weight: 800;
-  letter-spacing: .18em;
-}
-
-.button {
-  padding: 14px 22px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.primary {
-  background: var(--lime);
-  color: var(--black);
-  border-color: var(--lime);
-}
-
-.primary:hover {
-  background: var(--lime-soft);
-  border-color: var(--lime-soft);
-}
-
-
-/* =====================================================
    HERO
    ===================================================== */
 
@@ -116,11 +86,6 @@ nav a:hover {
   align-items: center;
   gap: 32px;
   padding: 30px 0 50px;
-}
-
-/* Pequeno ajuste visual do bloco textual */
-.hero > div:first-child {
-  transform: translateX(4px);
 }
 
 .eyebrow,
@@ -154,6 +119,20 @@ nav a:hover {
   gap: 16px;
   margin-top: 36px;
   flex-wrap: wrap;
+}
+
+.button {
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.primary {
+  background: var(--lime);
+  color: var(--black);
+  border-color: var(--lime);
 }
 
 .secondary:hover {
@@ -263,10 +242,16 @@ nav a:hover {
   display: grid;
   grid-template-columns: 230px 1fr;
   gap: 80px;
+}
 
-  /* Ajuste somente no conteúdo.
-     Não altera a largura da seção. */
-  padding-left: 4px;
+/*
+   Pequeno recuo visual apenas no conteúdo textual.
+   A linha da seção permanece no mesmo alinhamento
+   do header.
+*/
+
+.intro > *:last-child {
+  padding-left: 12px;
 }
 
 .intro p,
@@ -295,10 +280,10 @@ h2 {
   grid-template-columns: 1fr 1fr;
   gap: 24px;
   margin-top: 10px;
+}
 
-  /* IMPORTANTE:
-     Não adicionar padding aqui.
-     Os dois cards permanecem alinhados com a seção. */
+.tracks + * {
+  margin-left: 0;
 }
 
 .track {
@@ -355,19 +340,22 @@ h2 {
   grid-template-columns: 1fr .7fr;
   gap: 70px;
   margin-bottom: 50px;
+}
 
-  /* Somente o cabeçalho textual recua.
-     Os cards continuam alinhados à seção. */
-  padding-left: 4px;
+/*
+   Recuo somente dos textos.
+   O project-grid permanece exatamente alinhado
+   ao container da seção.
+*/
+
+.projects-head > * {
+  padding-left: 12px;
 }
 
 .project-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
-
-  /* Sem padding lateral.
-     Mantém os cards exatamente na linha da seção. */
 }
 
 .project {
@@ -455,9 +443,15 @@ h2 {
   display: grid;
   grid-template-columns: 230px 1fr;
   gap: 80px;
+}
 
-  /* Ajuste somente no conteúdo textual */
-  padding-left: 4px;
+/*
+   O conteúdo textual de contato acompanha
+   o mesmo pequeno recuo visual de Sobre e Projetos.
+*/
+
+.contact-content {
+  padding-left: 12px;
 }
 
 .contact-content h2 {
@@ -515,10 +509,6 @@ footer {
     gap: 40px;
   }
 
-  .hero > div:first-child {
-    transform: none;
-  }
-
   .hero-card {
     min-height: 400px;
   }
@@ -527,6 +517,12 @@ footer {
   .contact {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .intro > *:last-child,
+  .projects-head > *,
+  .contact-content {
+    padding-left: 8px;
   }
 
   .tracks,
@@ -546,6 +542,10 @@ footer {
 }
 
 
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
 @media (max-width: 520px) {
 
   .header,
@@ -555,8 +555,18 @@ footer {
     width: calc(100% - 32px);
   }
 
+  .header {
+    padding: 25px 0;
+  }
+
   .hero h1 {
     font-size: 44px;
+  }
+
+  .intro > *:last-child,
+  .projects-head > *,
+  .contact-content {
+    padding-left: 4px;
   }
 
   .mini-card {
