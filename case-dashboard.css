@@ -108,7 +108,7 @@ nav a:hover {
    ===================================================== */
 
 .case-hero {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1240px, calc(100% - 48px));
   margin: auto;
   padding: 120px 0 100px;
   border-bottom: 1px solid var(--line);
@@ -166,7 +166,7 @@ nav a:hover {
    ===================================================== */
 
 .case-section {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1240px, calc(100% - 48px));
   margin: auto;
   padding: 110px 0;
   border-bottom: 1px solid var(--line);
@@ -373,7 +373,7 @@ nav a:hover {
    ===================================================== */
 
 .case-cta {
-  width: min(1180px, calc(100% - 48px));
+  width: min(1240px, calc(100% - 48px));
   margin: auto;
   padding: 130px 0;
   text-align: center;
@@ -503,7 +503,7 @@ footer {
   .case-section,
   .case-cta,
   footer {
-    width: min(100% - 32px, 1180px);
+    width: calc(100% - 32px);
   }
 
   .header {
