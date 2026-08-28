@@ -108,18 +108,18 @@ nav a:hover {
    ===================================================== */
 
 .case-hero {
-  width: min(1240px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: auto;
-  padding: 120px 0 100px;
+  padding: 70px 0 90px;
   border-bottom: 1px solid var(--line);
 }
 
 .case-hero h1 {
-  max-width: 900px;
-  font-size: clamp(58px, 8vw, 110px);
+  max-width: 1000px;
+  font-size: clamp(52px, 6.5vw, 88px);
   line-height: .95;
   letter-spacing: -.065em;
-  margin: 24px 0 35px;
+  margin: 20px 0 30px;
 }
 
 .case-hero h1 span {
