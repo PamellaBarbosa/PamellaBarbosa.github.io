@@ -118,10 +118,7 @@ nav a:hover {
   padding: 30px 0 50px;
 }
 
-/*
-   Pequeno ajuste visual para alinhar melhor
-   o bloco textual com o header.
-*/
+/* Pequeno ajuste visual do bloco textual */
 .hero > div:first-child {
   transform: translateX(4px);
 }
@@ -157,20 +154,6 @@ nav a:hover {
   gap: 16px;
   margin-top: 36px;
   flex-wrap: wrap;
-}
-
-.button {
-  padding: 14px 22px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.primary {
-  background: var(--lime);
-  color: var(--black);
-  border-color: var(--lime);
 }
 
 .secondary:hover {
@@ -281,7 +264,8 @@ nav a:hover {
   grid-template-columns: 230px 1fr;
   gap: 80px;
 
-  /* Pequeno alinhamento visual do conteúdo */
+  /* Ajuste somente no conteúdo.
+     Não altera a largura da seção. */
   padding-left: 4px;
 }
 
@@ -312,8 +296,9 @@ h2 {
   gap: 24px;
   margin-top: 10px;
 
-  padding-left: 4px;
-  padding-right: 4px;
+  /* IMPORTANTE:
+     Não adicionar padding aqui.
+     Os dois cards permanecem alinhados com a seção. */
 }
 
 .track {
@@ -371,6 +356,8 @@ h2 {
   gap: 70px;
   margin-bottom: 50px;
 
+  /* Somente o cabeçalho textual recua.
+     Os cards continuam alinhados à seção. */
   padding-left: 4px;
 }
 
@@ -379,8 +366,8 @@ h2 {
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 
-  padding-left: 4px;
-  padding-right: 4px;
+  /* Sem padding lateral.
+     Mantém os cards exatamente na linha da seção. */
 }
 
 .project {
@@ -469,6 +456,7 @@ h2 {
   grid-template-columns: 230px 1fr;
   gap: 80px;
 
+  /* Ajuste somente no conteúdo textual */
   padding-left: 4px;
 }
 
@@ -586,14 +574,5 @@ footer {
   .track,
   .project {
     padding: 24px;
-  }
-
-  .intro,
-  .tracks,
-  .projects-head,
-  .project-grid,
-  .contact {
-    padding-left: 0;
-    padding-right: 0;
   }
 }
