@@ -7,6 +7,9 @@
   --lime: #b6e51d;
   --lime-soft: #d4f66b;
   --black: #121311;
+
+  /* Pequeno ajuste de alinhamento das Cases */
+  --case-offset: 12px;
 }
 
 * {
@@ -110,7 +113,7 @@ nav a:hover {
 .case-hero {
   width: min(1180px, calc(100% - 48px));
   margin: auto;
-  padding: 70px 0 90px;
+  padding: 70px var(--case-offset) 90px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -166,9 +169,9 @@ nav a:hover {
    ===================================================== */
 
 .case-section {
-  width: min(1240px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: auto;
-  padding: 110px 0;
+  padding: 110px var(--case-offset);
   border-bottom: 1px solid var(--line);
 }
 
@@ -373,9 +376,9 @@ nav a:hover {
    ===================================================== */
 
 .case-cta {
-  width: min(1240px, calc(100% - 48px));
+  width: min(1180px, calc(100% - 48px));
   margin: auto;
-  padding: 130px 0;
+  padding: 130px var(--case-offset);
   text-align: center;
 }
 
@@ -436,11 +439,11 @@ footer {
   }
 
   .case-hero {
-    padding: 90px 0 80px;
+    padding: 90px var(--case-offset) 80px;
   }
 
   .case-section {
-    padding: 90px 0;
+    padding: 90px var(--case-offset);
   }
 
   .case-grid {
@@ -470,11 +473,11 @@ footer {
 @media (max-width: 850px) {
 
   .case-hero {
-    padding: 80px 0;
+    padding: 80px var(--case-offset);
   }
 
   .case-section {
-    padding: 80px 0;
+    padding: 80px var(--case-offset);
   }
 
   .case-grid {
@@ -508,6 +511,13 @@ footer {
 
   .header {
     padding: 25px 0;
+  }
+
+  /* No celular, reduzimos o pequeno deslocamento */
+  .case-hero,
+  .case-section {
+    padding-left: 6px;
+    padding-right: 6px;
   }
 
   .case-hero h1 {
@@ -545,7 +555,7 @@ footer {
   }
 
   .case-cta {
-    padding: 100px 0;
+    padding: 100px 6px;
   }
 
   footer {
