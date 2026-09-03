@@ -624,11 +624,6 @@ footer {
     min-height: 430px;
   }
 
-  .process-item {
-    grid-template-columns: 60px 1fr;
-    gap: 20px;
-  }
-
   .catalog-embed {
     height: 500px;
   }
